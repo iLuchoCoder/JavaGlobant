@@ -13,6 +13,7 @@ import Models.Sys;
 import java.util.Scanner;
 
 public class Main {
+    // Consecutivos de Aplicacion y Sistema
     static int conseActApp = 1;
     static int conseActSys = 1;
 
@@ -55,7 +56,7 @@ public class Main {
                     if(ans.toUpperCase().equals("CS")){
                         Sys nsys = new Sys();
                         int tamSys = nsys.tamProceso();
-                        String nomSys = nsys.conseProc(conseActApp);
+                        String nomSys = nsys.conseProc(conseActSys);
                         if(tamSys>memory.memDisponible()){
                             throw new MemoryOverflowExeption("Memoria llena, libera espacio");
                         }
