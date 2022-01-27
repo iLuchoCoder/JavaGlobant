@@ -51,6 +51,7 @@ public class Main {
                             memory.agregarProcesoApp(tamApp,nomApp);
                             conseActApp++;
                             memory.mostrarMemoria();
+                            System.out.println("Memoria disponible: "+memory.memDisponible());
                         }
                     }
                     if(ans.toUpperCase().equals("CS")){
@@ -64,10 +65,16 @@ public class Main {
                             memory.agregarProcesoSys(tamSys, nomSys);
                             conseActSys++;
                             memory.mostrarMemoria();
+                            System.out.println("Memoria disponible: "+ memory.memDisponible());
                         }
                     }
                     if(ans.startsWith("D") || ans.startsWith("d")){
-                        break;
+                        StringBuilder elim = new StringBuilder(ans);
+                        String procElim = elim.deleteCharAt(0).toString();
+                        memory.eliminarProceso(procElim);
+                        memory.desfragmentar();
+                        memory.mostrarMemoria();
+                        System.out.println("Memoria disponible: "+ memory.memDisponible());
                     }
                 }
             }
