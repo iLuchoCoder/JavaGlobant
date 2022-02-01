@@ -16,7 +16,6 @@ public class Mem {
      * Inicializa la memoria de la aplicacion <br/>
      * Se llena todos los espacios con: "****"  <br/>
      *
-     * @return Mensaje de inicializaicon satisfactoria
      */
     public static void inicializarMemoria() {
         for (int x = 0; x < mem.length; x++) {
@@ -26,6 +25,19 @@ public class Mem {
         }
         System.out.println("**********************************************************************");
         System.out.println("Se ha inicializado la memoria correctamente");
+    }
+
+    /**
+     * Inicializa una memoria temporal para la desfragmentacion <br/>
+     * Se llena todos los espacios con: "****"  <br/>
+     *
+     */
+    public static void inicializarMemoriaTemp(String[][] tmp) {
+        for (int x = 0; x < tmp.length; x++) {
+            for (int y = 0; y < tmp[x].length; y++) {
+                tmp[x][y] = "****";
+            }
+        }
     }
 
     /**
@@ -114,8 +126,24 @@ public class Mem {
      * Unifica los espacios libres luego de eliminar un proceso
      */
     public static void desfragmentar() {
+        String[] lista = new String[200];
+        for(int i=0;i<lista.length;i++){
+            lista[i] = "****";
+        }
+        int index = 0;
         for (int x = 0; x < mem.length; x++) {
             for (int y = 0; y < mem[x].length; y++) {
+                if(!mem[x][y].equals("****")){
+                    lista[index] = mem[x][y].toString();
+                    index++;
+                }
+            }
+        }
+        index = 0;
+        for (int x = 0; x < mem.length; x++) {
+            for (int y = 0; y < mem[x].length; y++) {
+                mem[x][y] = lista[index];
+                index++;
             }
         }
     }

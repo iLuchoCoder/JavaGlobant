@@ -22,7 +22,7 @@ public class Main {
         System.out.println("CA - Crear proceso Aplicacion");
         System.out.println("CS - Crear proceso Sistema");
         System.out.println("D + ID Proceso - Para eliminar el proceso");
-        System.out.println("SALIR - Para terminar aplicacion");
+        System.out.println("Q - Para terminar aplicacion");
         System.out.println("Escribe el comando:");
         System.out.println("**********************************************************************");
     }
@@ -35,7 +35,7 @@ public class Main {
             try{
                 menu();
                 String ans = lector.nextLine();
-                if(ans.toUpperCase().equals("SALIR")){
+                if(ans.toUpperCase().equals("Q")){
                     break;
                 }
                 else{
