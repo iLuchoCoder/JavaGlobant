@@ -2,7 +2,7 @@ package MusicPlayer;
 
 /**
  * Interface Player
- * @Description Interface that contains the methods of the music player
+ * @Description Interface that contains the music player's methods
  * @author luis.pineda
  * @date 05-02-2022
  * @version 1.0
