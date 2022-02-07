@@ -5,7 +5,7 @@ package MusicPlayer;
  * @Description Interface that contains the music player's methods
  * @author luis.pineda
  * @date 05-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public interface Player {

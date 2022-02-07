@@ -5,7 +5,7 @@ package MusicPlayer;
  * @Description Class that implements interface Player
  * @author luis.pineda
  * @date 05-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public class MusicPlayer implements Player{
