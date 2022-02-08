@@ -8,25 +8,27 @@ package DogCart;
  */
 
 public abstract class HotDogDecorator implements HotDog{
-    private HotDog hd;
+
+    protected HotDog decoratedHotDog;
 
     /**
      * HotDogDecorator
      * @Description Hot Dog Decorator constructor
      * @date 06-02-2022
      */
-    public HotDogDecorator(HotDog hd){
-        this.hd = hd;
+    public HotDogDecorator(HotDog decoratedHotDog){
+        this.decoratedHotDog = decoratedHotDog;
     }
 
     /**
-     * getHotDog
-     *
-     * @return HotDog
-     * @Description Method that returns a HotDog
+     * createHotDog
+     * @Description Interface method to be implemented
      * @date 06-02-2022
+     * @return void
      */
-    protected HotDog getHotDog(){
-        return hd;
+    public void createHotDog(String topping) {
+        decoratedHotDog.createHotDog(topping);
     }
+
+
 }

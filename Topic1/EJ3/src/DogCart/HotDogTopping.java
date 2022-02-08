@@ -9,37 +9,40 @@ package DogCart;
 
 public class HotDogTopping extends HotDogDecorator {
 
+    String topping;
+
+    public String getTopping() {
+        return topping;
+    }
+
+    public void setTopping(String topping) {
+        this.topping = topping;
+    }
+
     /**
      * HotDogTopping
-     * @Description Hot Dog Topping constructor
+     *
+     * @param decoratedHotDog
+     * @Description Hot Dog Decorator constructor
      * @date 06-02-2022
      */
-    public HotDogTopping(HotDog hd){
-        super(hd);
+    public HotDogTopping(HotDog decoratedHotDog) {
+        super(decoratedHotDog);
     }
 
     /**
      * addTopping
-     *
-     * @param topping
-     * @return void
      * @Description Method that allows to add a topping to a basic hot dog
      * @date 06-02-2022
+     * @return void
      */
     @Override
-    public void addTopping(String topping) {
-        getHotDog().addTopping(topping);
+    public void createHotDog(String topping){
+        decoratedHotDog.createHotDog(topping);
+        addTopping(decoratedHotDog,topping);
     }
 
-    /**
-     * addTopping
-     *
-     * @return String
-     * @Description Method that display's the hot dog content
-     * @date 06-02-2022
-     */
-    @Override
-    public String showHotDog() {
-        return getHotDog().showHotDog();
+    private void addTopping(HotDog decoratedHotDog, String topping){
+        System.out.println("You add this topping to your hot dog: " + topping);
     }
 }

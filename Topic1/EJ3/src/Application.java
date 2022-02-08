@@ -1,5 +1,6 @@
 import DogCart.BasicHotDog;
 import DogCart.HotDog;
+import DogCart.HotDogDecorator;
 import DogCart.HotDogTopping;
 
 import java.util.Scanner;
@@ -35,18 +36,14 @@ public class Application {
                 HotDog hotdog = new HotDogTopping(new BasicHotDog());
                 menuDogCart();
                 String ans = read.nextLine();
-                if (ans.toUpperCase().equals("Q")) {
+                if (ans.toUpperCase().equals("Q") || ans.equals("2")) {
                     break;
                 }
                 if(ans.equals("1")){
                     System.out.println("Write your topping to add");
                     ans = read.nextLine();
-                    hotdog.addTopping(ans);
-                }
-                if(ans.equals("2")){
-                    System.out.println("Your hot dog order is");
-                    System.out.println(hotdog.showHotDog());
-                    break;
+
+                    hotdog.createHotDog(ans);
                 }
             }
         }
