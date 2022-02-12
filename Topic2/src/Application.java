@@ -18,6 +18,7 @@ public class Application {
     // ArrayList bn, bnc type printer to save the printers
     static ArrayList<Printer> bn = new ArrayList<>();
     static ArrayList<Printer> bnc = new ArrayList<>();
+    static boolean onlyColor = false;
 
     /**
      * createInitialPrinters
@@ -80,6 +81,22 @@ public class Application {
         System.out.println("1- Create printer");
         System.out.println("2- Show B/N printers and choose to print a document");
         System.out.println("3- Show B/N/C printers and choose to print a document");
+        System.out.println("4- Set: Show only B/N/C printers");
+        System.out.println("Q- Quit App");
+        System.out.println("**********************************************************************");
+    }
+
+    /**
+     * onlyColorMenu
+     *
+     * @return void
+     * @Description Method that display the only B/N/C printers
+     * @date 11-02-2022
+     */
+    public static void onlyColorMenu(){
+        System.out.println("**********************************************************************");
+        System.out.println("1- Create printer");
+        System.out.println("2- Show B/N/C printers and choose to print a document");
         System.out.println("Q- Quit App");
         System.out.println("**********************************************************************");
     }
@@ -121,35 +138,62 @@ public class Application {
         initialMenu();
         Scanner read = new Scanner(System.in);
         while (true) {
-            String ans = read.nextLine();
-            if (ans.toUpperCase().equals("Q")) {
-                break;
+            if(onlyColor==false){
+                String ans = read.nextLine();
+                if (ans.toUpperCase().equals("Q")) {
+                    break;
+                }
+                if(ans.equals("1")){
+                    createPrinter();
+                    initialMenu();
+                }
+                if(ans.equals("2")){
+                    showPrinters(bn);
+                    System.out.println("Enters the printers id to print a document");
+                    read = new Scanner(System.in);
+                    int idPrinter = Integer.parseInt(read.nextLine());
+                    System.out.println("Enter the document to print");
+                    read = new Scanner(System.in);
+                    String printDoc = read.nextLine();
+                    printDocument(bn,idPrinter,printDoc);
+                    initialMenu();
+                }
+                if(ans.equals("3")){
+                    showPrinters(bnc);
+                    System.out.println("Enters the printers id to print a document");
+                    read = new Scanner(System.in);
+                    int idPrinter = Integer.parseInt(read.nextLine());
+                    System.out.println("Enter the document to print");
+                    read = new Scanner(System.in);
+                    String printDoc = read.nextLine();
+                    printDocument(bnc,idPrinter,printDoc);
+                    initialMenu();
+                }
+                if(ans.equals("4")){
+                    onlyColor = true;
+                    onlyColorMenu();
+                }
             }
-            if(ans.equals("1")){
-                createPrinter();
-                initialMenu();
-            }
-            if(ans.equals("2")){
-                showPrinters(bn);
-                System.out.println("Enters the printers id to print a document");
-                read = new Scanner(System.in);
-                int idPrinter = Integer.parseInt(read.nextLine());
-                System.out.println("Enter the document to print");
-                read = new Scanner(System.in);
-                String printDoc = read.nextLine();
-                printDocument(bn,idPrinter,printDoc);
-                initialMenu();
-            }
-            if(ans.equals("3")){
-                showPrinters(bnc);
-                System.out.println("Enters the printers id to print a document");
-                read = new Scanner(System.in);
-                int idPrinter = Integer.parseInt(read.nextLine());
-                System.out.println("Enter the document to print");
-                read = new Scanner(System.in);
-                String printDoc = read.nextLine();
-                printDocument(bnc,idPrinter,printDoc);
-                initialMenu();
+            else{
+                String ans = read.nextLine();
+                if (ans.toUpperCase().equals("Q")) {
+                    break;
+                }
+                if(ans.equals("1")){
+                    createPrinter();
+                    onlyColorMenu();
+                }
+                if(ans.equals("2")){
+                    showPrinters(bnc);
+                    System.out.println("Enters the printers id to print a document");
+                    read = new Scanner(System.in);
+                    int idPrinter = Integer.parseInt(read.nextLine());
+                    System.out.println("Enter the document to print");
+                    read = new Scanner(System.in);
+                    String printDoc = read.nextLine();
+                    printDocument(bnc,idPrinter,printDoc);
+                    onlyColorMenu();
+                }
             }
         }
     }

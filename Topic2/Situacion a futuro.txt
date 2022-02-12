@@ -1,0 +1,7 @@
+Mi pensado para contemplar la creacion de nuevas impresoras fue guardando las impresoras en un ArrayList.
+
+Siendo 2 ArrayList para cada tipo de impresoras las que solo imprimen en Blanco/Negro y las que imprimen en color,
+estas impresoras y sus funciones son totalmente accesibles por el usuario para que puedan realizar sus funciones.
+
+Y en el menu, el usuario puede setear la aplicacion para que solo muestre las impresoras B/N/C, como contempla el
+enunciado del ejercicio.
