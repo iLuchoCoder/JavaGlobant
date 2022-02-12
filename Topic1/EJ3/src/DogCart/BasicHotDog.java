@@ -4,7 +4,7 @@ package DogCart;
  * @Description Class that implements a basic hotdog
  * @author luis.pineda
  * @date 06-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public class BasicHotDog implements HotDog {

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @Description Main class that runs the application
  * @author luis.pineda
  * @date 06-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public class Application {

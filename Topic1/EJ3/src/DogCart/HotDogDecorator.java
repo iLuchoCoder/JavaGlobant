@@ -4,7 +4,7 @@ package DogCart;
  * @Description Abstract class to add new functions
  * @author luis.pineda
  * @date 06-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public abstract class HotDogDecorator implements HotDog{

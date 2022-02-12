@@ -4,7 +4,7 @@ package DogCart;
  * @Description Class that adds a topping to a basic hot dog
  * @author luis.pineda
  * @date 06-02-2022
- * @version 1.0
+ * @version 1.1
  */
 
 public class HotDogTopping extends HotDogDecorator {
