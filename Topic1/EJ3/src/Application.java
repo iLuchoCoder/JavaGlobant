@@ -42,7 +42,6 @@ public class Application {
                 if(ans.equals("1")){
                     System.out.println("Write your topping to add");
                     ans = read.nextLine();
-
                     hotdog.createHotDog(ans);
                 }
             }

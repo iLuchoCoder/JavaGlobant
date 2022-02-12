@@ -4,7 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="Globant Tutorials" />
+    <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="Globant Tutorials">
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/Chain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/HR.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/Leave.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/LeaveHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/Manager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/ProjectLeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/ReasonType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/chain/TeamLeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/CommandMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/Light.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/LightOffCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/LightOnCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/SimpleRemoteControl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/Stereo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/StereoOffCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/command/StereoOnWithCDCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/Iterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/IteratorMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/List.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/Topic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/TopicIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/iterator/TopicList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/mediator/ChatRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/mediator/ChatUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/mediator/IChatRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/mediator/Mediator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/mediator/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/MessagePublisher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/MessageSubscriberOne.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/MessageSubscriberTwo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/Observer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/ObserverMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/behavioral/observer/Subject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/AbstractFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/CarConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/CarFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/Engine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/FamilyCarEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/FamilyCarFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/FamilyCarSuspension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/RaceCarEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/RaceCarFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/RaceCarSuspension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/abstractFactory/Suspension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/builder/Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/builder/Task.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/builder/TaskBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/BasicPlan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/Factory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/FullPlan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/GetPlanFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/MediumPlan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/factory/Plan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/prototype/NasaSpaceShip.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/prototype/Position.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/prototype/Prototype.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/prototype/SpaceShip.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/singleton/Singleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/creationals/singleton/Sun.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/adapter/Adapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/adapter/FastCar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/adapter/Movable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/adapter/MovableAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/adapter/MovableAdapterImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/Circle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/Decorator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/Rectangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/RedShapeDecorator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/Shape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/decorator/ShapeDecorator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/Facade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportFooter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportGeneratorFacade$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportGeneratorFacade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportHeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/facade/ReportWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/proxy/Internet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/proxy/Proxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/proxy/ProxyInternet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/com/globant/corzo/structural/proxy/RealInternet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Topic2/out/production/Topic2/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Topic2/out/production/Topic2/Office/Printer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Topic2/out/production/Topic2/Office/Printers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Topic2/src/Office/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Topic2/src/Office/Printers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic1/EJ3/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic1/EJ3/src/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic2/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic2/src/Application.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +187,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Topic1/EJ3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Topic2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -118,7 +213,7 @@
       <recent name="com.globant.corzo.behavioral.command" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ObserverMain">
+  <component name="RunManager" selected="Application.Facade">
     <configuration name="Adapter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.globant.corzo.structural.adapter.Adapter" />
       <module name="DesignPatterns" />
@@ -186,8 +281,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ObserverMain" />
         <item itemvalue="Application.Facade" />
+        <item itemvalue="Application.ObserverMain" />
         <item itemvalue="Application.Decorator" />
         <item itemvalue="Application.Adapter" />
         <item itemvalue="Application.Factory" />
@@ -230,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644631568916</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Globant Tutorials">
+      <created>1644631661636</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644631661636</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
