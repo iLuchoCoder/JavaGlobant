@@ -5,7 +5,7 @@ import java.io.IOException;
 class Chain {
 
     public static void main(String args[]) throws IOException {
-
+        //  Example
         TeamLeader teamLeader = new TeamLeader();
         ProjectLeader projectLeader = new ProjectLeader();
         HR hr = new HR();
