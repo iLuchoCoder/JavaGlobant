@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="" />
-=======
-    <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="Globant_Tutorials">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
->>>>>>> origin/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,18 +18,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-<<<<<<< HEAD
-    <option name="RESET_MODE" value="HARD" />
-=======
->>>>>>> origin/master
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24AkN55H0fVew5LmiBER2n0UHwv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -96,14 +82,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-<<<<<<< HEAD
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-=======
->>>>>>> origin/master
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -220,63 +200,9 @@
       <workItem from="1643230584723" duration="14435000" />
       <workItem from="1643289130402" duration="16352000" />
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00001" summary="GlobantCode">
-      <created>1644625609783</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1644625609783</updated>
-    </task>
-    <task id="LOCAL-00002" summary="GlobantCode">
-      <created>1644625704598</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1644625704598</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Revert &quot;Bad Creation&quot;&#10;&#10;This reverts commit bd2d4d72">
-      <created>1644626647697</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1644626647697</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
-=======
-    <task id="LOCAL-00001" summary="Globant_Tutorials">
-      <created>1644626139276</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1644626139276</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
->>>>>>> origin/master
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-<<<<<<< HEAD
-    <MESSAGE value="GlobantCode" />
-    <MESSAGE value="Revert &quot;Bad Creation&quot;&#10;&#10;This reverts commit bd2d4d72" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Bad Creation&quot;&#10;&#10;This reverts commit bd2d4d72" />
-=======
-    <MESSAGE value="Globant_Tutorials" />
-    <option name="LAST_COMMIT_MESSAGE" value="Globant_Tutorials" />
->>>>>>> origin/master
   </component>
 </project>
