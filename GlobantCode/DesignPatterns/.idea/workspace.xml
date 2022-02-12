@@ -4,102 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="GlobantCode">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/Chain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/HR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/Leave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/LeaveHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/ProjectLeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/ReasonType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/chain/TeamLeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/CommandMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/Light.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/LightOffCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/LightOnCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/SimpleRemoteControl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/Stereo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/StereoOffCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/command/StereoOnWithCDCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/Iterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/IteratorMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/Topic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/TopicIterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/iterator/TopicList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/mediator/ChatRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/mediator/ChatUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/mediator/IChatRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/mediator/Mediator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/mediator/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/MessagePublisher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/MessageSubscriberOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/MessageSubscriberTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/Observer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/ObserverMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer/Subject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/AbstractFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/CarConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/CarFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/FamilyCarEngine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/FamilyCarFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/FamilyCarSuspension.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/RaceCarEngine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/RaceCarFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/RaceCarSuspension.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/abstractFactory/Suspension.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/builder/Builder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/builder/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/builder/TaskBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/BasicPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/Factory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/FullPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/GetPlanFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/MediumPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/factory/Plan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/prototype/NasaSpaceShip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/prototype/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/prototype/Prototype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/prototype/SpaceShip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/singleton/Singleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/creationals/singleton/Sun.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/adapter/Adapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/adapter/FastCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/adapter/Movable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/adapter/MovableAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/adapter/MovableAdapterImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/Decorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/Rectangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/RedShapeDecorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/decorator/ShapeDecorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/Facade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/Report.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportFooter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportGeneratorFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportHeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/facade/ReportWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/proxy/Internet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/proxy/Proxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/proxy/ProxyInternet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/globant/corzo/structural/proxy/RealInternet.java" beforeDir="false" />
-    </list>
+    <list default="true" id="e74125ee-b16e-41b9-89f2-60734aaf9952" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,14 +18,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24AkN55H0fVew5LmiBER2n0UHwv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -181,11 +82,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/globant/corzo/behavioral/observer" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -302,39 +200,9 @@
       <workItem from="1643230584723" duration="14435000" />
       <workItem from="1643289130402" duration="16352000" />
     </task>
-    <task id="LOCAL-00001" summary="GlobantCode">
-      <created>1644625609783</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1644625609783</updated>
-    </task>
-    <task id="LOCAL-00002" summary="GlobantCode">
-      <created>1644625704598</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1644625704598</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="GlobantCode" />
-    <option name="LAST_COMMIT_MESSAGE" value="GlobantCode" />
   </component>
 </project>
