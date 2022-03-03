@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0-oracle
+    volumes:
+    - ./schemas:/var/lib/mysql:rw
+    ports:
+    - "3306:3306"
+    hostname: LuchoServer
+    environment:
+      MYSQL_ROOT_PASSWORD: "Glober88"
+      MYSQL_DATABASE: "db_topic5"
+      MYSQL_USER: "iLucho88"
+      MYSQL_PASSWORD: "Veritas88"
+    restart: always
