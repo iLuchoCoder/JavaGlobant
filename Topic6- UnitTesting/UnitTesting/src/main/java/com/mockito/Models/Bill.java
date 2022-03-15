@@ -51,6 +51,18 @@ public class Bill {
     )
     private boolean paid;
 
+    public Bill(){
+        super();
+    }
+
+    public Bill(int id_company, String id_bill, int due_date, int amount, boolean paid) {
+        this.id_company = id_company;
+        this.id_bill = id_bill;
+        this.due_date = due_date;
+        this.amount = amount;
+        this.paid = paid;
+    }
+
     public int getId_company() {
         return id_company;
     }
