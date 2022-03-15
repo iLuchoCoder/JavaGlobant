@@ -31,7 +31,7 @@ public class Bill {
             name="id_bill",
             nullable = false
     )
-    private int id_bill;
+    private String id_bill;
 
     @Column(
             name="due_date",
@@ -45,16 +45,11 @@ public class Bill {
     )
     private int amount;
 
-    public Bill(int id_company, int id_bill, int due_date, int amount) {
-        this.id_company = id_company;
-        this.id_bill = id_bill;
-        this.due_date = due_date;
-        this.amount = amount;
-    }
-
-    public Bill(){
-        super();
-    }
+    @Column(
+            name="paid",
+            nullable = false
+    )
+    private boolean paid;
 
     public int getId_company() {
         return id_company;
@@ -64,11 +59,11 @@ public class Bill {
         this.id_company = id_company;
     }
 
-    public int getId_bill() {
+    public String getId_bill() {
         return id_bill;
     }
 
-    public void setId_bill(int id_bill) {
+    public void setId_bill(String id_bill) {
         this.id_bill = id_bill;
     }
 
@@ -88,14 +83,22 @@ public class Bill {
         this.amount = amount;
     }
 
+    public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
+    }
+
     @Override
     public String toString() {
         return "Bill{" +
-                "id=" + id +
-                ", id_company=" + id_company +
+                "id_company=" + id_company +
                 ", id_bill=" + id_bill +
                 ", due_date=" + due_date +
                 ", amount=" + amount +
+                ", paid=" + paid +
                 '}';
     }
 }
