@@ -1,10 +1,10 @@
-package com.weatherservice.tracking;
+package com.meteorological.tracking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TrackingApplicationTests {
+class ApplicationSBTests {
 
 	@Test
 	void contextLoads() {
