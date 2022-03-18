@@ -1,9 +1,10 @@
-package com.meteorological.repository;
+package com.weather.repository;
 
-import com.meteorological.models.Temperature;
+import com.weather.model.Temperature;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TemperatureRepository extends JpaRepository<Temperature, Long> {
+
 }

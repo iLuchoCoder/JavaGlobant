@@ -1,7 +1,7 @@
-package com.meteorological.service;
+package com.weather.service;
 
-import com.meteorological.models.Temperature;
-import com.meteorological.repository.TemperatureRepository;
+import com.weather.model.Temperature;
+import com.weather.repository.TemperatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class TemperatureServiceImp implements TemperatureService{
     private TemperatureRepository repo;
 
     @Override
-    public List<Temperature> listAllTemperatures() {
+    public List<Temperature> listAll() {
         return repo.findAll();
     }
 }

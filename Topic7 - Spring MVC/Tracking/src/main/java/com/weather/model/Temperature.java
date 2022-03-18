@@ -1,4 +1,4 @@
-package com.meteorological.models;
+package com.weather.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -6,9 +6,10 @@ import java.util.Date;
 @Entity
 @Table(name="temperature")
 public class Temperature {
+
     @Id
     @SequenceGenerator(
-            name="temperature_sequence",
+            name = "temperature_sequence",
             sequenceName = "temperature_sequence",
             allocationSize = 1
     )
@@ -23,51 +24,52 @@ public class Temperature {
     private Long id;
 
     @Column(
-            name="date",
+            name = "date",
             nullable = false
     )
     private Date date;
 
     @Column(
-            name="latitude",
+            name = "latitude",
             nullable = false
     )
     private float latitude;
 
     @Column(
-            name="longitude",
+            name = "longitude",
             nullable = false
     )
     private float longitude;
 
     @Column(
-            name="city",
+            name = "city",
             nullable = false,
-            columnDefinition ="TEXT"
+            columnDefinition = "TEXT"
     )
     private String city;
 
     @Column(
-            name="state",
+            name = "state",
             nullable = false,
-            columnDefinition ="TEXT"
+            columnDefinition = "TEXT"
     )
     private String state;
 
     @Column(
-            name="country",
+            name = "country",
             nullable = false,
-            columnDefinition ="TEXT"
+            columnDefinition = "TEXT"
     )
     private String country;
 
     @Column(
-            name="temperature",
+            name = "temperature",
             nullable = false
     )
     private float temperature;
 
-    public Temperature(){}
+    public Temperature() {
+    }
 
     public Temperature(Date date, float latitude, float longitude, String city, String state, String country, float temperature) {
         super();
