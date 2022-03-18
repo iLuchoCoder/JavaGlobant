@@ -35,16 +35,16 @@
         </tr>
         </thead>
         <tbody>
-            <tr th:each="temperature : ${temperatures}">
-                <td th:text="${temperature.id}">ID</td>
-                <td th:text="${temperature.temperature}">Temperature</td>
-                <td th:text="${temperature.latitude}">Latitude</td>
-                <td th:text="${temperature.longitude}">Longitude</td>
-                <td th:text="${temperature.city}">City</td>
-                <td th:text="${temperature.state}">State</td>
-                <td th:text="${temperature.country}">Country</td>
-                <td th:text="${temperature.date}">Date</td>
-            </tr>
+        <tr th:each="temperature : ${temperatures}">
+            <td th:text="${temperature.id}">ID</td>
+            <td th:text="${temperature.temperature}">Temperature</td>
+            <td th:text="${temperature.latitude}">Latitude</td>
+            <td th:text="${temperature.longitude}">Longitude</td>
+            <td th:text="${temperature.city}">City</td>
+            <td th:text="${temperature.state}">State</td>
+            <td th:text="${temperature.country}">Country</td>
+            <td th:text="${temperature.date}">Date</td>
+        </tr>
         </tbody>
     </table>
 </div>
