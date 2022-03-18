@@ -1,24 +1,20 @@
 package com.meteorological.controller;
 
-import com.meteorological.models.Temperature;
 import com.meteorological.service.TemperatureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 public class TemperatureController {
 
     @Autowired
-    TemperatureService tempService;
+    private TemperatureService service;
 
-    @GetMapping({"/temperature","/"})
+    @GetMapping({"/","/temperature"})
     public String showAll(Model model){
-        List<Temperature> listTemperatures = tempService.listAllTemperatures();
-        model.addAttribute("listTemperatures", listTemperatures);
-        return "temperatures";
+        model.addAttribute("temperatures", service.listAllTemperatures());
+        return "index"; // returns to index.html file
     }
 }

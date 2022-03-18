@@ -11,10 +11,10 @@ import java.util.List;
 public class TemperatureServiceImp implements TemperatureService{
 
     @Autowired
-    private TemperatureRepository tempRepo;
+    private TemperatureRepository repo;
 
     @Override
     public List<Temperature> listAllTemperatures() {
-        return tempRepo.findAll();
+        return repo.findAll();
     }
 }
