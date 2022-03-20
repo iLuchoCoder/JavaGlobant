@@ -22,4 +22,12 @@ public class TemperatureController {
         return "index"; // Return to index.html file
     }
 
+    @RequestMapping("/new")
+    public String registerTemp(Model model){
+        Temperature tempo = new Temperature();
+        model.addAttribute("tempo",tempo);
+        return "new_temperature";
+    }
+
+
 }
