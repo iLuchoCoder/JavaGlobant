@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/new">Add Temperature</a>
+                    <a class="nav-link" href="/new_temperature">Add Temperature</a>
                 </li>
             </ul>
         </div>
@@ -32,7 +32,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
             <h1 class="text-center">Temperature Record</h1>
             <div class="card-body">
-                <form th:action="@{/save}" th:object="${temperature}" method="post">
+                <form th:action="@{/save}" th:object="${temperatures}" method="post">
                     <div class="form-group">
                         <label>Temperature :</label>
                         <input type="text" name="Temperature" th:field="*{temperature}" class="form-control" placeholder="Type the temperature" required>
