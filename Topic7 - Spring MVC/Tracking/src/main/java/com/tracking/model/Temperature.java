@@ -1,4 +1,4 @@
-package com.weather.model;
+package com.tracking.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,18 +8,9 @@ import java.util.Date;
 public class Temperature {
 
     @Id
-    @SequenceGenerator(
-            name = "temperature_sequence",
-            sequenceName = "temperature_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "temperature_sequence"
-    )
-    @Column(
-            name = "id",
-            updatable = false
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id",
+            nullable = false
     )
     private Long id;
 
