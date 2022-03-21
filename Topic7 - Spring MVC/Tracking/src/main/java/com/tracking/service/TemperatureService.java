@@ -13,7 +13,10 @@ public class TemperatureService {
     @Autowired
     private TemperatureRepository repo;
 
-    public List<Temperature> listAll(){
+    public List<Temperature> listAll(String keyword){
+        if(keyword != null){
+            return repo.findAll(keyword);
+        }
         return repo.findAll();
     }
 
