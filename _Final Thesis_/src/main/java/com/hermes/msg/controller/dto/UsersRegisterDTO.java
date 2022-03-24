@@ -14,21 +14,8 @@ public class UsersRegisterDTO {
 	private int zip_code;
 	private String password;
 
-	public UsersRegisterDTO(Long id, String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password) {
-		this.id = id;
-		this.username = username;
-		this.name = name;
-		this.last_name = last_name;
-		this.identification_number = identification_number;
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.country = country;
-		this.zip_code = zip_code;
-		this.password = password;
-	}
-
 	public UsersRegisterDTO(String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password) {
+		super();
 		this.username = username;
 		this.name = name;
 		this.last_name = last_name;

@@ -64,11 +64,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="users : ${usuarios}">
-					<td th:text="${users.id}">ID</td>
-					<td th:text="${users.nombre}">ID</td>
-					<td th:text="${users.apellido}">ID</td>
-					<td th:text="${users.email}">ID</td>
+				<tr th:each="usuario : ${usuarios}">
+					<td th:text="${usuario.id}">ID</td>
+					<td th:text="${usuario.nombre}">ID</td>
+					<td th:text="${usuario.apellido}">ID</td>
+					<td th:text="${usuario.email}">ID</td>
 				</tr>
 			</tbody>
 		</table>

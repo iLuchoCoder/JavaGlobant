@@ -10,29 +10,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.hermes.msg.controller.dto.UsersRegisterDTO;
 
 @Controller
-@RequestMapping("/registro")
+@RequestMapping("/register")
 public class RegisterUsersController {
 
-	private UsersService usersService;
+    private UsersService usersService;
 
-	public RegisterUsersController(UsersService usersService) {
-		super();
-		this.usersService = usersService;
-	}
-	
-	@ModelAttribute("users")
-	public UsersRegisterDTO returnNewUserRegisterDTO() {
-		return new UsersRegisterDTO();
-	}
+    public RegisterUsersController(UsersService usersService) {
+        super();
+        this.usersService = usersService;
+    }
 
-	@GetMapping
-	public String showRegisterForm() {
-		return "register";
-	}
-	
-	@PostMapping
-	public String registerUserAccount(@ModelAttribute("users") UsersRegisterDTO registerDTO) {
-		usersService.save(registerDTO);
-		return "redirect:/register?success";
-	}
+    @ModelAttribute("users")
+    public UsersRegisterDTO returnNewUserRegisterDTO() {
+        return new UsersRegisterDTO();
+    }
+
+    @GetMapping
+    public String showRegisterForm() {
+        return "register";
+    }
+
+    @PostMapping
+    public String registerUserAccount(@ModelAttribute("users") UsersRegisterDTO registerDTO) {
+        usersService.save(registerDTO);
+        return "redirect:/register?success";
+    }
 }

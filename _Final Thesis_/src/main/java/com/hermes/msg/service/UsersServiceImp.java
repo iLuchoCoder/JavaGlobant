@@ -48,10 +48,10 @@ public class UsersServiceImp implements UsersService {
 		if(users == null) {
 			throw new UsernameNotFoundException("Invalid user or password");
 		}
-		return new User(users.getUsername(), users.getPassword(), mapearAutoridadesRoles(users.getRoles()));
+		return new User(users.getUsername(), users.getPassword(), mapAuthRoles(users.getRoles()));
 	}
 
-	private Collection<? extends GrantedAuthority> mapearAutoridadesRoles(Collection<Role> roles){
+	private Collection<? extends GrantedAuthority> mapAuthRoles(Collection<Role> roles){
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
 	}
 	
