@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="com.hermes.msg" />
         <module name="Final_Thesis" />
+        <module name="_Final Thesis_" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Final_Thesis" options="-parameters" />
+      <module name="_Final Thesis_" options="-parameters" />
       <module name="com.hermes.msg" options="-parameters" />
     </option>
   </component>
