@@ -47,56 +47,54 @@
             <form th:action="@{/register}" method="post" th:object="${users}">
 
                 <div class="form-group">
-                    <label class="control-label" for="username">Username : </label> <input
-                        id="username" class="form-control" th:field="*{username}"
+                    <label type="text" class="control-label" for="username">Username : </label> <input
+                        id="username" class="form-control" th:field="*{username}" required autofocus="autofocus">
+                </div>
+
+                <div class="form-group">
+                    <label type="text" class="control-label" for="name">Name : </label> <input
+                        id="name" class="form-control" th:field="*{name}" required autofocus="autofocus">
+                </div>
+
+                <div class="form-group">
+                    <label type="text" class="control-label" for="last_name">Last Name : </label> <input
+                        id="last_name" class="form-control" th:field="*{last_name}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="name">Name : </label> <input
-                        id="name" class="form-control" th:field="*{name}"
+                    <label type="number" class="control-label" for="identification_number">Identification Number : </label> <input
+                        id="identification_number" class="form-control" th:field="*{identification_number}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="last_name">Last Name : </label> <input
-                        id="last_name" type="form-control" class="form-control" th:field="*{last_name}"
+                    <label type="text" class="control-label" for="address">Address : </label> <input
+                        id="address" class="form-control" th:field="*{address}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="identification_number">Identification Number : </label> <input
-                        id="identification_number" type="form-control" class="form-control" th:field="*{identification_number}"
+                    <label type="text" class="control-label" for="city">City : </label> <input
+                        id="city" class="form-control" th:field="*{city}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="address">Address : </label> <input
-                        id="address" type="form-control" class="form-control" th:field="*{address}"
+                    <label type="text" class="control-label" for="state">State : </label> <input
+                        id="state" class="form-control" th:field="*{state}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="city">City : </label> <input
-                        id="city" type="form-control" class="form-control" th:field="*{city}"
+                    <label type="text" class="control-label" for="country">Country : </label> <input
+                        id="country" class="form-control" th:field="*{country}"
                         required autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="state">State : </label> <input
-                        id="state" type="form-control" class="form-control" th:field="*{state}"
-                        required autofocus="autofocus">
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="country">Country : </label> <input
-                        id="country" type="form-control" class="form-control" th:field="*{country}"
-                        required autofocus="autofocus">
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="zip_code">Zip-Code : </label> <input
-                        id="zip_code" type="form-control" class="form-control" th:field="*{zip_code}"
+                    <label type="number" class="control-label" for="zip_code">Zip-Code : </label> <input
+                        id="zip_code" class="form-control" th:field="*{zip_code}"
                         required autofocus="autofocus">
                 </div>
 
