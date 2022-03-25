@@ -1,22 +1,18 @@
 package com.hermes.msg.controller;
 
 import com.hermes.msg.service.UsersService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.hermes.msg.controller.dto.UsersRegisterDTO;
 
 @Controller
-@RestController
 @RequestMapping("/register")
 public class RegisterUsersController {
 
+    @Autowired
     private UsersService usersService;
-
-    public RegisterUsersController(UsersService usersService) {
-        super();
-        this.usersService = usersService;
-    }
 
     @ModelAttribute("users")
     public UsersRegisterDTO returnNewUserRegisterDTO() {

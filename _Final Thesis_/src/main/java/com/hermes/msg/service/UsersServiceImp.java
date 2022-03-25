@@ -22,16 +22,11 @@ import com.hermes.msg.repository.UsersRepository;
 @Service
 public class UsersServiceImp implements UsersService {
 
-	
+	@Autowired
 	private UsersRepository usersRepository;
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-	
-	public UsersServiceImp(UsersRepository usersRepository) {
-		super();
-		this.usersRepository = usersRepository;
-	}
 
 	@Override
 	public Users save(UsersRegisterDTO registerDTO) {
