@@ -61,7 +61,11 @@ public class User {
     )
     private Collection<Role> roles;
 
-    public Users(Long id, String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password, Collection<Role> roles) {
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "users_messages", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "message_id"))
+    private Collection<Message> allMessages;
+
+    public User(Long id, String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password, Collection<Role> roles, Collection<Message> allMessages) {
         this.id = id;
         this.username = username;
         this.name = name;
@@ -74,9 +78,10 @@ public class User {
         this.zip_code = zip_code;
         this.password = password;
         this.roles = roles;
+        this.allMessages = allMessages;
     }
 
-    public Users(String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password, Collection<Role> roles) {
+    public User(String username, String name, String last_name, int identification_number, String address, String city, String state, String country, int zip_code, String password, Collection<Role> roles, Collection<Message> allMessages) {
         this.username = username;
         this.name = name;
         this.last_name = last_name;
@@ -88,9 +93,10 @@ public class User {
         this.zip_code = zip_code;
         this.password = password;
         this.roles = roles;
+        this.allMessages = allMessages;
     }
 
-    public Users() {
+    public User() {
     }
 
     public Long getId() {
@@ -189,9 +195,17 @@ public class User {
         this.roles = roles;
     }
 
+    public Collection<Message> getAllMessages() {
+        return allMessages;
+    }
+
+    public void setAllMessages(Collection<Message> allMessages) {
+        this.allMessages = allMessages;
+    }
+
     @Override
     public String toString() {
-        return "Users{" +
+        return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
@@ -204,6 +218,7 @@ public class User {
                 ", zip_code=" + zip_code +
                 ", password='" + password + '\'' +
                 ", roles=" + roles +
+                ", allMessages=" + allMessages +
                 '}';
     }
 }
