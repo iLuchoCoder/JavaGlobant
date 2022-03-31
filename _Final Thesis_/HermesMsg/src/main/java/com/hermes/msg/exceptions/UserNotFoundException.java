@@ -8,18 +8,14 @@ public class UserNotFoundException extends RuntimeException{
 
     private static final long serialVersionUID = 1L;
 
-    private String username;
+    private String resourceName;
+    private String nameField;
+    private long fieldValue;
 
-    public UserNotFoundException(String username) {
-        super(String.format("Username %s not found ", username));
-        this.username = username;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public UserNotFoundException(String resourceName, String nameField, long fieldValue) {
+        super(String.format("%s not found with : %s : '%s'",resourceName,nameField,fieldValue));
+        this.resourceName = resourceName;
+        this.nameField = nameField;
+        this.fieldValue = fieldValue;
     }
 }
