@@ -1,13 +1,12 @@
 package com.hermes.msg.controller;
 
 import com.hermes.msg.dto.UserDTO;
+import com.hermes.msg.dto.UserResponse;
 import com.hermes.msg.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/hermes/users")
@@ -17,8 +16,8 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<UserDTO> getUsers(@RequestParam(value = "pagNum", defaultValue = "0", required = false) int pagNum,
-                                  @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize) {
+    public UserResponse getUsers(@RequestParam(value = "pagNum", defaultValue = "0", required = false) int pagNum,
+                                 @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize) {
         return userService.listAllUsers(pagNum,pageSize);
     }
 
