@@ -16,30 +16,31 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping
-    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO){
-        return new ResponseEntity<>(userService.createUser(userDTO), HttpStatus.CREATED);
-    }
-
     @GetMapping
-    public List<UserDTO> getUsers(){
-        return userService.listAllUsers();
+    public List<UserDTO> getUsers(@RequestParam(value = "pagNum", defaultValue = "0", required = false) int pagNum,
+                                  @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize) {
+        return userService.listAllUsers(pagNum,pageSize);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDTO> getUserById(@PathVariable(name="id") long id){
+    public ResponseEntity<UserDTO> getUserById(@PathVariable(name = "id") long id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
+    @PostMapping
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
+        return new ResponseEntity<>(userService.createUser(userDTO), HttpStatus.CREATED);
+    }
+
     @PutMapping("/{id}")
-    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO, @PathVariable(name="id") long id){
-        UserDTO userResponse = userService.updateUser(userDTO,id);
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO, @PathVariable(name = "id") long id) {
+        UserDTO userResponse = userService.updateUser(userDTO, id);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable(name="id") long id){
+    public ResponseEntity<String> deleteUser(@PathVariable(name = "id") long id) {
         userService.deleteUser(id);
-        return new ResponseEntity<>("User deleted successfully",HttpStatus.OK);
+        return new ResponseEntity<>("User deleted successfully", HttpStatus.OK);
     }
 }

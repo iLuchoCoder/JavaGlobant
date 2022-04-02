@@ -1,10 +1,14 @@
 package com.hermes.msg.service;
 
 import com.hermes.msg.dto.UserDTO;
+import com.hermes.msg.dto.UserResponse;
 import com.hermes.msg.exceptions.UserNotFoundException;
 import com.hermes.msg.model.User;
 import com.hermes.msg.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -64,9 +68,19 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<UserDTO> listAllUsers() {
-        List<User> users = userRepository.findAll();
-        return users.stream().map(user -> mapDTO(user)).collect(Collectors.toList());
+    public UserResponse listAllUsers(int pageNum, int pageSize) {
+        Pageable pageable = PageRequest.of(pageNum,pageSize);
+        Page<User> users = userRepository.findAll(pageable);
+        List<User> userList = users.getContent();
+        List<UserDTO> content = userList.stream().map(user -> mapDTO(user)).collect(Collectors.toList());
+        UserResponse userResponse = new UserResponse();
+        userResponse.setContent(content);
+        userResponse.setNumPage(users.getNumber());
+        userResponse.setSizePage(users.getSize());
+        userResponse.setTotalElements(users.getTotalElements());
+        userResponse.setTotalPages(users.getTotalPages());
+        userResponse.setLast(users.isLast());
+        return userResponse;
     }
 
     @Override
