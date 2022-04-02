@@ -17,8 +17,6 @@ public class UserDTO {
     private String state;
     private String country;
     private int zip_code;
-    private Collection<Role> roles;
-    private Collection<Message> allMessages;
 
     public UserDTO() {
         super();
@@ -36,8 +34,6 @@ public class UserDTO {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
-        this.roles = roles;
-        this.allMessages = allMessages;
     }
 
     public Long getId() {
@@ -118,21 +114,5 @@ public class UserDTO {
 
     public void setZip_code(int zip_code) {
         this.zip_code = zip_code;
-    }
-
-    public Collection<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Collection<Role> roles) {
-        this.roles = roles;
-    }
-
-    public Collection<Message> getAllMessages() {
-        return allMessages;
-    }
-
-    public void setAllMessages(Collection<Message> allMessages) {
-        this.allMessages = allMessages;
     }
 }

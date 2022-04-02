@@ -2,6 +2,8 @@ package com.hermes.msg.model;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity(name="user")
 @Table(name="user",uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
@@ -38,19 +40,8 @@ public class User {
     @Column(name="zip_code",nullable=false)
     private int zip_code;
 
-    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id")
-    )
-    private Collection<Role> roles;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "users_messages",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "message_id"))
-    private Collection<Message> allMessages;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
+    private Set<Message> messages = new HashSet<>();
 
     public User(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
         super();
@@ -64,8 +55,14 @@ public class User {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
-        this.roles = roles;
-        this.allMessages = allMessages;
+    }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
     }
 
     public User(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
@@ -79,8 +76,6 @@ public class User {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
-        this.roles = roles;
-        this.allMessages = allMessages;
     }
 
     public User() {
@@ -164,39 +159,5 @@ public class User {
 
     public void setZip_code(int zip_code) {
         this.zip_code = zip_code;
-    }
-
-    public Collection<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Collection<Role> roles) {
-        this.roles = roles;
-    }
-
-    public Collection<Message> getAllMessages() {
-        return allMessages;
-    }
-
-    public void setAllMessages(Collection<Message> allMessages) {
-        this.allMessages = allMessages;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", name='" + name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", id_number=" + id_number +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", country='" + country + '\'' +
-                ", zip_code=" + zip_code +
-                ", roles=" + roles +
-                ", allMessages=" + allMessages +
-                '}';
     }
 }

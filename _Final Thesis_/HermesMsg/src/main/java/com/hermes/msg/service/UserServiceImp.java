@@ -42,8 +42,6 @@ public class UserServiceImp implements UserService {
         userDTO.setState(user.getState());
         userDTO.setCountry(user.getCountry());
         userDTO.setZip_code(user.getZip_code());
-        userDTO.setRoles(user.getRoles());
-        userDTO.setAllMessages(user.getAllMessages());
 
         return userDTO;
     }
@@ -61,8 +59,6 @@ public class UserServiceImp implements UserService {
         user.setState(userDTO.getState());
         user.setCountry(userDTO.getCountry());
         user.setZip_code(userDTO.getZip_code());
-        user.setRoles(userDTO.getRoles());
-        user.setAllMessages(userDTO.getAllMessages());
 
         return user;
     }
@@ -104,8 +100,6 @@ public class UserServiceImp implements UserService {
         user.setState(userDTO.getState());
         user.setCountry(userDTO.getCountry());
         user.setZip_code(userDTO.getZip_code());
-        user.setRoles(userDTO.getRoles());
-        user.setAllMessages(userDTO.getAllMessages());
 
         User userUpdated = userRepository.save(user);
 

@@ -1,40 +1,17 @@
-package com.hermes.msg.model;
+package com.hermes.msg.dto;
 
-import javax.persistence.*;
+public class MessageDTO {
 
-@Entity(name="message")
-public class Message {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(name="from",nullable = false)
     private String from;
-
-    @Column(name="to",nullable = false)
     private String to;
-
-    @Column(name="cc")
     private String cc;
-
-    @Column(name="bcc")
     private String bcc;
-
-    @Column(name="subject", nullable = false)
     private String subject;
-
-    @Column(name="body")
     private String body;
-
-    @Column(name="attachment")
     private String attachment;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    public Message() {
+    public MessageDTO() {
         super();
     }
 
@@ -100,13 +77,5 @@ public class Message {
 
     public void setAttachment(String attachment) {
         this.attachment = attachment;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
