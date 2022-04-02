@@ -3,8 +3,8 @@ package com.hermes.msg.dto;
 public class MessageDTO {
 
     private Integer id;
-    private String from;
-    private String to;
+    private String origin;
+    private String destination;
     private String cc;
     private String bcc;
     private String subject;
@@ -23,20 +23,20 @@ public class MessageDTO {
         this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public String getOrigin() {
+        return origin;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
-    public String getTo() {
-        return to;
+    public String getDestination() {
+        return destination;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 
     public String getCc() {

@@ -23,7 +23,7 @@ public class MessageServiceImp implements MessageService{
         Message message = mapEntity(messageDTO);
         Users users = usersRepository
                 .findById(id).orElseThrow(()-> new UsersNotFoundException("Users","id",id));
-        message.setUser(users);
+        message.setUsers(users);
         Message newMessage = messageRepository.save(message);
         return mapDTO(newMessage);
     }
@@ -33,8 +33,8 @@ public class MessageServiceImp implements MessageService{
         MessageDTO messageDTO = new MessageDTO();
 
         messageDTO.setId(message.getId());
-        messageDTO.setFrom(message.getFrom());
-        messageDTO.setTo(message.getTo());
+        messageDTO.setOrigin(message.getOrigin());
+        messageDTO.setDestination(message.getDestination());
         messageDTO.setCc(message.getCc());
         messageDTO.setBcc(message.getBcc());
         messageDTO.setSubject(message.getSubject());
@@ -49,8 +49,8 @@ public class MessageServiceImp implements MessageService{
         Message message = new Message();
 
         message.setId(messageDTO.getId());
-        message.setFrom(messageDTO.getFrom());
-        message.setTo(messageDTO.getTo());
+        message.setOrigin(messageDTO.getOrigin());
+        message.setDestination(messageDTO.getDestination());
         message.setCc(messageDTO.getCc());
         message.setBcc(messageDTO.getBcc());
         message.setSubject(messageDTO.getSubject());

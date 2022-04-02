@@ -1,5 +1,7 @@
 package com.hermes.msg.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
@@ -40,7 +42,7 @@ public class Users {
     @Column(name="zip_code",nullable=false)
     private int zip_code;
 
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval = true)
     private Set<Message> messages = new HashSet<>();
 
     public Users(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {

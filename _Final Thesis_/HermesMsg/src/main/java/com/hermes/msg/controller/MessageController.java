@@ -14,9 +14,17 @@ public class MessageController {
     @Autowired
     private MessageService messageService;
 
-    @PostMapping("/user/{id}/messages")
+    @PostMapping("/users/{id}/messages")
     public ResponseEntity<MessageDTO> sendMessage(@PathVariable(value = "id") long id, @RequestBody MessageDTO messageDTO){
-        return new ResponseEntity<>(messageService.createMessage(id,messageDTO), HttpStatus.CREATED);
+        if(!messageDTO.getCc().isEmpty())
+        {
+            new ResponseEntity<>(messageService.createMessage(Long.parseLong(messageDTO.getCc()),messageDTO), HttpStatus.CREATED);
+        }
+        if(!messageDTO.getBcc().isEmpty())
+        {
+            new ResponseEntity<>(messageService.createMessage(Long.parseLong(messageDTO.getBcc()),messageDTO), HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(messageService.createMessage(Long.parseLong(messageDTO.getDestination()),messageDTO), HttpStatus.CREATED);
     }
 
 

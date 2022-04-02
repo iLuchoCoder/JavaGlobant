@@ -1,5 +1,7 @@
 package com.hermes.msg.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity(name="message")
@@ -9,11 +11,11 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="from",nullable = false)
-    private String from;
+    @Column(name="origin",nullable = false)
+    private String origin;
 
-    @Column(name="to",nullable = false)
-    private String to;
+    @Column(name="destination",nullable = false)
+    private String destination;
 
     @Column(name="cc")
     private String cc;
@@ -46,20 +48,20 @@ public class Message {
         this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public String getOrigin() {
+        return origin;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
-    public String getTo() {
-        return to;
+    public String getDestination() {
+        return destination;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 
     public String getCc() {
@@ -102,11 +104,11 @@ public class Message {
         this.attachment = attachment;
     }
 
-    public Users getUser() {
+    public Users getUsers() {
         return users;
     }
 
-    public void setUser(Users users) {
+    public void setUsers(Users users) {
         this.users = users;
     }
 }
