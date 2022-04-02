@@ -1,11 +1,11 @@
 package com.hermes.msg.service;
 
 import com.hermes.msg.dto.MessageDTO;
-import com.hermes.msg.exceptions.UserNotFoundException;
+import com.hermes.msg.exceptions.UsersNotFoundException;
 import com.hermes.msg.model.Message;
-import com.hermes.msg.model.User;
+import com.hermes.msg.model.Users;
 import com.hermes.msg.repository.MessageRepository;
-import com.hermes.msg.repository.UserRepository;
+import com.hermes.msg.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,14 +16,14 @@ public class MessageServiceImp implements MessageService{
     private MessageRepository messageRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    private UsersRepository usersRepository;
 
     @Override
     public MessageDTO createMessage(long id, MessageDTO messageDTO) {
         Message message = mapEntity(messageDTO);
-        User user = userRepository
-                .findById(id).orElseThrow(()-> new UserNotFoundException("User","id",id));
-        message.setUser(user);
+        Users users = usersRepository
+                .findById(id).orElseThrow(()-> new UsersNotFoundException("Users","id",id));
+        message.setUser(users);
         Message newMessage = messageRepository.save(message);
         return mapDTO(newMessage);
     }

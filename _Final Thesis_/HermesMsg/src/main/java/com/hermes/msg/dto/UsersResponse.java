@@ -2,24 +2,24 @@ package com.hermes.msg.dto;
 
 import java.util.List;
 
-public class UserResponse {
+public class UsersResponse {
 
-    private List<UserDTO> content;
+    private List<UsersDTO> content;
     private int numPage;
     private int sizePage;
     private long totalElements;
     private int totalPages;
     private boolean last;
 
-    public UserResponse() {
+    public UsersResponse() {
         super();
     }
 
-    public List<UserDTO> getContent() {
+    public List<UsersDTO> getContent() {
         return content;
     }
 
-    public void setContent(List<UserDTO> content) {
+    public void setContent(List<UsersDTO> content) {
         this.content = content;
     }
 

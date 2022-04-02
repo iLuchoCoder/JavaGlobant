@@ -30,9 +30,9 @@ public class Message {
     @Column(name="attachment")
     private String attachment;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "users_id", referencedColumnName = "id", nullable = false)
+    private Users users;
 
     public Message() {
         super();
@@ -102,11 +102,11 @@ public class Message {
         this.attachment = attachment;
     }
 
-    public User getUser() {
-        return user;
+    public Users getUser() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Users users) {
+        this.users = users;
     }
 }

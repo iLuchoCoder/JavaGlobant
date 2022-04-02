@@ -1,28 +1,49 @@
-package com.hermes.msg.dto;
+package com.hermes.msg.model;
 
-import com.hermes.msg.model.Message;
-import com.hermes.msg.model.Role;
-
+import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
-public class UserDTO {
+@Entity(name="users")
+@Table(name="users",uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
+public class Users {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="username",nullable=false)
     private String username;
+
+    @Column(name="name",nullable=false)
     private String name;
+
+    @Column(name="last_name",nullable=false)
     private String last_name;
+
+    @Column(name="id_number",nullable=false)
     private int id_number;
+
+    @Column(name="address",nullable=false)
     private String address;
+
+    @Column(name="city",nullable=false)
     private String city;
+
+    @Column(name="state",nullable=false)
     private String state;
+
+    @Column(name="country",nullable=false)
     private String country;
+
+    @Column(name="zip_code",nullable=false)
     private int zip_code;
 
-    public UserDTO() {
-        super();
-    }
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL,orphanRemoval = true)
+    private Set<Message> messages = new HashSet<>();
 
-    public UserDTO(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
+    public Users(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
         super();
         this.id = id;
         this.username = username;
@@ -34,6 +55,30 @@ public class UserDTO {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
+    }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
+    }
+
+    public Users(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
+        super();
+        this.username = username;
+        this.name = name;
+        this.last_name = last_name;
+        this.id_number = id_number;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.zip_code = zip_code;
+    }
+
+    public Users() {
     }
 
     public Long getId() {
