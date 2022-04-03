@@ -7,6 +7,7 @@ import com.hermes.msg.model.Message;
 import com.hermes.msg.model.Users;
 import com.hermes.msg.repository.MessageRepository;
 import com.hermes.msg.repository.UsersRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,10 @@ public class MessageServiceImp implements MessageService{
 
     @Autowired
     private UsersRepository usersRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
 
     @Override
     public MessageDTO createMessage(long id, MessageDTO messageDTO) {
@@ -71,33 +76,13 @@ public class MessageServiceImp implements MessageService{
 
     // This method converts Entity to DTO
     private MessageDTO mapDTO(Message message){
-        MessageDTO messageDTO = new MessageDTO();
-
-        messageDTO.setId(message.getId());
-        messageDTO.setOrigin(message.getOrigin());
-        messageDTO.setDestination(message.getDestination());
-        messageDTO.setCc(message.getCc());
-        messageDTO.setBcc(message.getBcc());
-        messageDTO.setSubject(message.getSubject());
-        messageDTO.setBody(message.getBody());
-        messageDTO.setAttachment(message.getAttachment());
-
+        MessageDTO messageDTO = modelMapper.map(message,MessageDTO.class);
         return messageDTO;
     }
 
     // This method converts DTO to Entity
     private Message mapEntity(MessageDTO messageDTO){
-        Message message = new Message();
-
-        message.setId(messageDTO.getId());
-        message.setOrigin(messageDTO.getOrigin());
-        message.setDestination(messageDTO.getDestination());
-        message.setCc(messageDTO.getCc());
-        message.setBcc(messageDTO.getBcc());
-        message.setSubject(messageDTO.getSubject());
-        message.setBody(messageDTO.getBody());
-        message.setAttachment(messageDTO.getAttachment());
-
+        Message message = modelMapper.map(messageDTO, Message.class);
         return message;
     }
 }

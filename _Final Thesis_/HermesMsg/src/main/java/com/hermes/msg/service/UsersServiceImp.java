@@ -5,6 +5,7 @@ import com.hermes.msg.dto.UsersResponse;
 import com.hermes.msg.exceptions.UsersNotFoundException;
 import com.hermes.msg.model.Users;
 import com.hermes.msg.repository.UsersRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -20,6 +21,9 @@ public class UsersServiceImp implements UsersService {
     @Autowired
     private UsersRepository usersRepository;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     @Override
     public UsersDTO createUser(UsersDTO usersDTO) {
         Users users = mapEntity(usersDTO);
@@ -31,35 +35,13 @@ public class UsersServiceImp implements UsersService {
 
     // This method converts Entity to DTO
     private UsersDTO mapDTO(Users users){
-        UsersDTO usersDTO = new UsersDTO();
-        usersDTO.setId(users.getId());
-        usersDTO.setUsername(users.getUsername());
-        usersDTO.setName(users.getName());
-        usersDTO.setLast_name(users.getLast_name());
-        usersDTO.setId_number(users.getId_number());
-        usersDTO.setAddress(users.getAddress());
-        usersDTO.setCity(users.getCity());
-        usersDTO.setState(users.getState());
-        usersDTO.setCountry(users.getCountry());
-        usersDTO.setZip_code(users.getZip_code());
-
+        UsersDTO usersDTO = modelMapper.map(users,UsersDTO.class);
         return usersDTO;
     }
 
     // This method converts DTO to Entity
     private Users mapEntity(UsersDTO usersDTO){
-        Users users = new Users();
-
-        users.setUsername(usersDTO.getUsername());
-        users.setName(usersDTO.getName());
-        users.setLast_name(usersDTO.getLast_name());
-        users.setId_number(usersDTO.getId_number());
-        users.setAddress(usersDTO.getAddress());
-        users.setCity(usersDTO.getCity());
-        users.setState(usersDTO.getState());
-        users.setCountry(usersDTO.getCountry());
-        users.setZip_code(usersDTO.getZip_code());
-
+        Users users = modelMapper.map(usersDTO,Users.class);
         return users;
     }
 
