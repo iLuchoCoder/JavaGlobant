@@ -1,5 +1,6 @@
 package com.hermes.msg.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -42,6 +43,7 @@ public class Users {
     @Column(name="zip_code",nullable=false)
     private int zip_code;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval = true)
     private Set<Message> messages = new HashSet<>();
 
@@ -162,4 +164,6 @@ public class Users {
     public void setZip_code(int zip_code) {
         this.zip_code = zip_code;
     }
+
+
 }

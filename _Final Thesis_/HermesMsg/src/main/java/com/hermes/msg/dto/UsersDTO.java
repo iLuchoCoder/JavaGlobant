@@ -4,6 +4,7 @@ import com.hermes.msg.model.Message;
 import com.hermes.msg.model.Role;
 
 import java.util.Collection;
+import java.util.Set;
 
 public class UsersDTO {
 
@@ -17,6 +18,7 @@ public class UsersDTO {
     private String state;
     private String country;
     private int zip_code;
+    private Set<Message> messages;
 
     public UsersDTO() {
         super();
@@ -114,5 +116,13 @@ public class UsersDTO {
 
     public void setZip_code(int zip_code) {
         this.zip_code = zip_code;
+    }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
     }
 }
