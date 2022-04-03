@@ -6,6 +6,7 @@ import com.hermes.msg.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,17 +27,20 @@ public class UsersController {
         return ResponseEntity.ok(usersService.getUserById(id));
     }
 
+    @PreAuthorize("hasRole('USER','ADMIN')")
     @PostMapping
     public ResponseEntity<UsersDTO> createUser(@RequestBody UsersDTO usersDTO) {
         return new ResponseEntity<>(usersService.createUser(usersDTO), HttpStatus.CREATED);
     }
 
+    @PreAuthorize("hasRole('USER','ADMIN')")
     @PutMapping("/{id}")
     public ResponseEntity<UsersDTO> updateUser(@RequestBody UsersDTO usersDTO, @PathVariable(name = "id") long id) {
         UsersDTO userResponse = usersService.updateUser(usersDTO, id);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('USER','ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable(name = "id") long id) {
         usersService.deleteUser(id);
