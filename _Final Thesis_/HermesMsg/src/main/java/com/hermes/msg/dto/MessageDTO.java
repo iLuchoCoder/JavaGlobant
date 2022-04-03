@@ -2,7 +2,7 @@ package com.hermes.msg.dto;
 
 public class MessageDTO {
 
-    private Integer id;
+    private Long id;
     private String origin;
     private String destination;
     private String cc;
@@ -15,11 +15,11 @@ public class MessageDTO {
         super();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
