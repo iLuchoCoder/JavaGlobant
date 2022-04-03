@@ -54,6 +54,21 @@ public class MessageServiceImp implements MessageService{
         return mapDTO(message);
     }
 
+    @Override
+    public void deleteMessage(long userID, long messageID) {
+        Users users = usersRepository
+                .findById(userID).orElseThrow(()-> new UsersNotFoundException("Users","id",userID));
+
+        Message message = messageRepository.findById(messageID)
+                .orElseThrow(()-> new UsersNotFoundException("Message","id",messageID));
+
+        if(!message.getId().equals(users.getId())){
+            throw new HermesAppExeption(HttpStatus.BAD_REQUEST,"Message does not belong to user");
+        }
+
+        messageRepository.delete(message);
+    }
+
     // This method converts Entity to DTO
     private MessageDTO mapDTO(Message message){
         MessageDTO messageDTO = new MessageDTO();

@@ -39,4 +39,10 @@ public class MessageController {
         }
         return new ResponseEntity<>(messageService.createMessage(Long.parseLong(messageDTO.getDestination()),messageDTO), HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/users/{userID}/messages/{messageID}")
+    public ResponseEntity<String> deleteMessage(@PathVariable(value = "userID") long userID, @PathVariable(value = "messageID") long messageID){
+        messageService.deleteMessage(userID, messageID);
+        return new ResponseEntity<>("Message deleted successfully",HttpStatus.OK);
+    }
 }

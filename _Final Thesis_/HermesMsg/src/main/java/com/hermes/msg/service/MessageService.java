@@ -12,4 +12,6 @@ public interface MessageService {
 
     public MessageDTO getMessageByID(long userID, long messageID);
 
+    public void deleteMessage(long userID, long messageID);
+
 }
