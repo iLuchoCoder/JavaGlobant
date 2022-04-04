@@ -19,12 +19,9 @@ public class UsersDTO {
     private String country;
     private int zip_code;
     private Set<Message> messages;
+    private String password;
 
-    public UsersDTO() {
-        super();
-    }
-
-    public UsersDTO(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
+    public UsersDTO(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Set<Message> messages, String password) {
         super();
         this.id = id;
         this.username = username;
@@ -36,6 +33,12 @@ public class UsersDTO {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
+        this.messages = messages;
+        this.password = password;
+    }
+
+    public UsersDTO() {
+        super();
     }
 
     public Long getId() {
@@ -124,5 +127,13 @@ public class UsersDTO {
 
     public void setMessages(Set<Message> messages) {
         this.messages = messages;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

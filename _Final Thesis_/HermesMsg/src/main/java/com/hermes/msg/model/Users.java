@@ -16,38 +16,55 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="username",nullable=false)
+    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(name="name",nullable=false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name="last_name",nullable=false)
+    @Column(name = "last_name", nullable = false)
     private String last_name;
 
-    @Column(name="id_number",nullable=false)
+    @Column(name = "id_number", nullable = false)
     private int id_number;
 
-    @Column(name="address",nullable=false)
+    @Column(name = "address", nullable = false)
     private String address;
 
-    @Column(name="city",nullable=false)
+    @Column(name = "city", nullable = false)
     private String city;
 
-    @Column(name="state",nullable=false)
+    @Column(name = "state", nullable = false)
     private String state;
 
-    @Column(name="country",nullable=false)
+    @Column(name = "country", nullable = false)
     private String country;
 
-    @Column(name="zip_code",nullable=false)
+    @Column(name = "zip_code", nullable = false)
     private int zip_code;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @JsonBackReference
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval = true)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private Set<Message> messages = new HashSet<>();
 
-    public Users(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "users_roles",
+            joinColumns = @JoinColumn(name = "users_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<Role> roles = new HashSet<>();
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
+    }
+
+    public Users(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, String password, Set<Message> messages, Set<Role> roles) {
         super();
         this.id = id;
         this.username = username;
@@ -59,17 +76,12 @@ public class Users {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
-    }
-
-    public Set<Message> getMessages() {
-        return messages;
-    }
-
-    public void setMessages(Set<Message> messages) {
+        this.password = password;
         this.messages = messages;
+        this.roles = roles;
     }
 
-    public Users(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Collection<Role> roles, Collection<Message> allMessages) {
+    public Users(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, String password, Set<Message> messages, Set<Role> roles) {
         super();
         this.username = username;
         this.name = name;
@@ -80,9 +92,13 @@ public class Users {
         this.state = state;
         this.country = country;
         this.zip_code = zip_code;
+        this.password = password;
+        this.messages = messages;
+        this.roles = roles;
     }
 
     public Users() {
+        super();
     }
 
     public Long getId() {
@@ -165,5 +181,21 @@ public class Users {
         this.zip_code = zip_code;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }
+
+
