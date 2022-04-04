@@ -1,14 +1,11 @@
 package com.hermes.msg.dto;
 
 import com.hermes.msg.model.Message;
-import com.hermes.msg.model.Role;
 
-import java.util.HashSet;
 import java.util.Set;
 
-public class UsersDTO {
+public class RegisterDTO {
 
-    private Long id;
     private String username;
     private String name;
     private String last_name;
@@ -19,27 +16,9 @@ public class UsersDTO {
     private String country;
     private int zip_code;
     private Set<Message> messages;
-    private Set<Role> roles = new HashSet<>();
     private String password;
 
-    public UsersDTO(Long id, String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Set<Message> messages, Set<Role> roles, String password) {
-        super();
-        this.id = id;
-        this.username = username;
-        this.name = name;
-        this.last_name = last_name;
-        this.id_number = id_number;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.country = country;
-        this.zip_code = zip_code;
-        this.messages = messages;
-        this.roles = roles;
-        this.password = password;
-    }
-
-    public UsersDTO(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Set<Message> messages, Set<Role> roles, String password) {
+    public RegisterDTO(String username, String name, String last_name, int id_number, String address, String city, String state, String country, int zip_code, Set<Message> messages, String password) {
         super();
         this.username = username;
         this.name = name;
@@ -51,20 +30,11 @@ public class UsersDTO {
         this.country = country;
         this.zip_code = zip_code;
         this.messages = messages;
-        this.roles = roles;
         this.password = password;
     }
 
-    public UsersDTO() {
+    public RegisterDTO() {
         super();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -145,14 +115,6 @@ public class UsersDTO {
 
     public void setMessages(Set<Message> messages) {
         this.messages = messages;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
     }
 
     public String getPassword() {
