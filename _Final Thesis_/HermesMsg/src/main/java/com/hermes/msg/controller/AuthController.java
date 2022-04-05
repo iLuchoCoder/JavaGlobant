@@ -1,11 +1,13 @@
 package com.hermes.msg.controller;
 
+import com.hermes.msg.dto.JwtAuthResponseDTO;
 import com.hermes.msg.dto.LoginDTO;
 import com.hermes.msg.dto.RegisterDTO;
 import com.hermes.msg.model.Role;
 import com.hermes.msg.model.Users;
 import com.hermes.msg.repository.RoleRepository;
 import com.hermes.msg.repository.UsersRepository;
+import com.hermes.msg.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,13 +39,19 @@ public class AuthController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+
     @PostMapping("/login")
-    public ResponseEntity<String> authenticateUser(@RequestBody LoginDTO loginDTO){
+    public ResponseEntity<JwtAuthResponseDTO> authenticateUser(@RequestBody LoginDTO loginDTO){
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginDTO.getUsername(),loginDTO.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        return new ResponseEntity<>("You have successfully logged in", HttpStatus.OK);
+        // Get token from jwtTokenProvider
+        String token = jwtTokenProvider.generateToken(authentication);
+
+        return ResponseEntity.ok(new JwtAuthResponseDTO(token));
 
     }
 
