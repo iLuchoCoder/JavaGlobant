@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "7ef31b5c-082a-4eab-b22d-23a08d637717",
+		"name": "Final Thesis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "LogIn",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"iLuchoGlober1\",\r\n    \"password\" : \"Veridisquo8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"iLuchoGlober1\",\r\n    \"password\" : \"Veridisquo8\",\r\n    \"name\" : \"Luis\",\r\n    \"last_name\" : \"Pineda\", \r\n    \"id_number\" : 1130623316,\r\n    \"address\" : \"CL 1 11 11\",\r\n    \"city\" : \"Cali\", \r\n    \"state\" : \"Valle del Cauca\",\r\n    \"country\" : \"Colombia\",\r\n    \"zip_code\" : 760035\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendMessage",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\" : \"1\",\r\n    \"destination\" : \"3\",\r\n    \"cc\" : \"5\",\r\n    \"bcc\" : \"\",\r\n    \"subject\" : \"Test subject 3\",\r\n    \"body\" : \"Message 3\",\r\n    \"attachment\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/3/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"3",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"iLuchoGlober88\",\r\n    \"name\" : \"Luis\",\r\n    \"last_name\" : \"Pineda\", \r\n    \"id_number\" : 1130623316,\r\n    \"address\" : \"CL 1 11 11\",\r\n    \"city\" : \"Cali\", \r\n    \"state\" : \"Valle del Cauca\",\r\n    \"country\" : \"Colombia\",\r\n    \"zip_code\" : 760035\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "ListUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"2000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListUsersPagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users?PageNum=1&pageSize=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users"
+							],
+							"query": [
+								{
+									"key": "PageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessageByUserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessageById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1/messages/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "DeleteUserByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMessageById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpTHVjaG9HbG9iZXIxIiwiaWF0IjoxNjQ5MTMxNTI0LCJleHAiOjE2NDk3MzYzMjR9.i8fVqBNc4UTs-fAZbOk0lzSQ96E0LC0xTpM6Df6lddOtVjTVRrrgomqpTsm2eb6PlJEpfaeiBDmVbWHRR2LcmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hermes/users/1/messages/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hermes",
+								"users",
+								"1",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
